@@ -1,10 +1,15 @@
 import React from 'react';
-import './App.css';
+import Header from "./components/Header";
+import AirportInfo from "./components/AirportInfo";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      Starter Code
+    <div>
+      <Header title="Flights"/>
+      <AirportInfo/>
+      
+      <Footer title="2021"/>
     </div>
   );
 }

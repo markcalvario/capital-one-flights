@@ -1,8 +1,11 @@
 import React from 'react';
-import './Footer.css';
 
 function Footer(props) { 
-    return;
+    return(
+        <div className="fixed-bottom bg-dark py-3 text-white text-center">
+            {props.title}
+        </div>
+    )
 }
 
 export default Footer;

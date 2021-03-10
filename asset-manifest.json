@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/capital-one-flights/static/css/main.20adbfac.chunk.css",
+    "main.js": "/capital-one-flights/static/js/main.0d8abcae.chunk.js",
+    "main.js.map": "/capital-one-flights/static/js/main.0d8abcae.chunk.js.map",
+    "runtime-main.js": "/capital-one-flights/static/js/runtime-main.ec7c5ed2.js",
+    "runtime-main.js.map": "/capital-one-flights/static/js/runtime-main.ec7c5ed2.js.map",
+    "static/css/2.658248ec.chunk.css": "/capital-one-flights/static/css/2.658248ec.chunk.css",
+    "static/js/2.a27232f0.chunk.js": "/capital-one-flights/static/js/2.a27232f0.chunk.js",
+    "static/js/2.a27232f0.chunk.js.map": "/capital-one-flights/static/js/2.a27232f0.chunk.js.map",
+    "index.html": "/capital-one-flights/index.html",
+    "static/css/2.658248ec.chunk.css.map": "/capital-one-flights/static/css/2.658248ec.chunk.css.map",
+    "static/css/main.20adbfac.chunk.css.map": "/capital-one-flights/static/css/main.20adbfac.chunk.css.map",
+    "static/js/2.a27232f0.chunk.js.LICENSE.txt": "/capital-one-flights/static/js/2.a27232f0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ec7c5ed2.js",
+    "static/css/2.658248ec.chunk.css",
+    "static/js/2.a27232f0.chunk.js",
+    "static/css/main.20adbfac.chunk.css",
+    "static/js/main.0d8abcae.chunk.js"
+  ]
+}

@@ -7,17 +7,13 @@ import Form from "react-bootstrap/Form";
 
 function Places(props) { 
     const [sort, setSort] = useState("Low To High");
-    console.log(props.error)
+
     let quotes = props.quotes;
     let currency = props.currency;
-    let places = props.places;
+
     
-    let origin;
-    let destination;
-    if (places){
-        origin = places[0]; 
-        destination = places[1];
-    }
+    let origin = props.origin.toUpperCase();
+    let destination = props.destination.toUpperCase();
 
     
 
@@ -26,8 +22,9 @@ function Places(props) {
     return (
         
         <div className="container-fluid w-75 py-4">
-            {props.error ? 
-                (<div className="w-25">
+                <div className="w-25">
+                    
+                    {quotes ? quotes.length : 0} results
                     <Form className="py-2">
                         <Form.Group>
                             <Form.Label>Sort by Price:</Form.Label>
@@ -38,11 +35,7 @@ function Places(props) {
                         </Form.Group>
                 
                     </Form>
-                </div>) 
-            : 
-            (
-                <div>0 Results</div>
-            )}
+                </div>
             
             
             <ListGroup>
@@ -54,18 +47,20 @@ function Places(props) {
                             <ListGroup.Item key={index} className="py-2">
                                 <Row >
                                     <Col xl={5}>
-                                        <p className="my-0"> Departure Date:</p>
+                                        <p className="my-0 font-weight-bold"> Departure Date:</p>
                                         <p className="my-0">{new Date(Date.parse(departure.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {destination && origin ? <p>{origin.SkyscannerCode} to {destination.SkyscannerCode}</p>: <></>}
+                                        {/* {destination && origin ? <p>{destination.SkyscannerCode} to {origin.SkyscannerCode} </p>: <></>} */}
+                                        <p>{origin.substring(0, origin.length - 4)} to {destination.substring(0, destination.length - 4)} </p>
                                     </Col>
                                     <Col xl={5}>
-                                        <p className="my-0">Return Date:</p>
+                                        <p className="my-0 font-weight-bold">Return Date:</p>
                                         <p className="my-0">{new Date(Date.parse(returnInfo.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {destination && origin ? <p>{destination.SkyscannerCode} to {origin.SkyscannerCode}</p>: <></>}
+                                        {/* {destination && origin ? <p> {origin.SkyscannerCode} to {destination.SkyscannerCode} </p>: <></>} */}
+                                        <p> {destination.substring(0, destination.length - 4)} to {origin.substring(0, origin.length - 4)} </p>
                                     </Col>
                                     <Col xl={2} className="text-center">
                                         {quote.MinPrice}
-                                        {currency[0]? <span> {currency[0].Code}</span>:<></>}
+                                        {currency ? <span> {currency[0].Code}</span>:<></>}
                                     </Col>
                                 </Row>      
                             </ListGroup.Item>
@@ -79,18 +74,20 @@ function Places(props) {
                             <ListGroup.Item key={index} className="py-2">
                                 <Row >
                                     <Col xl={5}>
-                                        <p className="my-0"> Departure Date:</p>
+                                        <p className="my-0 font-weight-bold"> Departure Date:</p>
                                         <p className="my-0">{new Date(Date.parse(departure.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {destination && origin ? <p>{origin.SkyscannerCode} to {destination.SkyscannerCode}</p>: <></>}
+                                        {/* {destination && origin ? <p>{origin.SkyscannerCode} to {destination.SkyscannerCode}</p>: <></>} */}
+                                        <p>{origin} to {destination} </p>  
                                     </Col>
                                     <Col xl={5}>
-                                        <p className="my-0">Return Date:</p>
+                                        <p className="my-0 font-weight-bold">Return Date:</p>
                                         <p className="my-0">{new Date(Date.parse(returnInfo.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {destination && origin ? <p>{destination.SkyscannerCode} to {origin.SkyscannerCode}</p>: <></>}
+                                        {/* {destination && origin ? <p>{destination.SkyscannerCode} to {origin.SkyscannerCode}</p>: <></>} */}
+                                        <p> {destination} to {origin} </p>
                                     </Col>
                                     <Col xl={2} className="text-center">
                                         {quote.MinPrice}
-                                        {currency[0]? <span> {currency[0].Code}</span>:<></>}
+                                        {currency ? <span> {currency[0].Code}</span>:<></>}
                                     </Col>
                                 </Row>      
                             </ListGroup.Item>

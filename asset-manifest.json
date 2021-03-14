@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/capital-one-flights/static/css/main.20adbfac.chunk.css",
-    "main.js": "/capital-one-flights/static/js/main.ad3b0be6.chunk.js",
-    "main.js.map": "/capital-one-flights/static/js/main.ad3b0be6.chunk.js.map",
+    "main.js": "/capital-one-flights/static/js/main.25011df3.chunk.js",
+    "main.js.map": "/capital-one-flights/static/js/main.25011df3.chunk.js.map",
     "runtime-main.js": "/capital-one-flights/static/js/runtime-main.ec7c5ed2.js",
     "runtime-main.js.map": "/capital-one-flights/static/js/runtime-main.ec7c5ed2.js.map",
     "static/css/2.658248ec.chunk.css": "/capital-one-flights/static/css/2.658248ec.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.658248ec.chunk.css",
     "static/js/2.53273193.chunk.js",
     "static/css/main.20adbfac.chunk.css",
-    "static/js/main.ad3b0be6.chunk.js"
+    "static/js/main.25011df3.chunk.js"
   ]
 }

@@ -10,15 +10,9 @@ function Places(props) {
 
     let quotes = props.quotes;
     let currency = props.currency;
-
-    
     let origin = props.origin.toUpperCase();
     let destination = props.destination.toUpperCase();
-
     
-
-
-
     return (
         
         <div className="container-fluid w-75 py-4">
@@ -49,13 +43,11 @@ function Places(props) {
                                     <Col xl={5}>
                                         <p className="my-0 font-weight-bold"> Departure Date:</p>
                                         <p className="my-0">{new Date(Date.parse(departure.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {/* {destination && origin ? <p>{destination.SkyscannerCode} to {origin.SkyscannerCode} </p>: <></>} */}
                                         <p>{origin.substring(0, origin.length - 4)} to {destination.substring(0, destination.length - 4)} </p>
                                     </Col>
                                     <Col xl={5}>
                                         <p className="my-0 font-weight-bold">Return Date:</p>
                                         <p className="my-0">{new Date(Date.parse(returnInfo.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {/* {destination && origin ? <p> {origin.SkyscannerCode} to {destination.SkyscannerCode} </p>: <></>} */}
                                         <p> {destination.substring(0, destination.length - 4)} to {origin.substring(0, origin.length - 4)} </p>
                                     </Col>
                                     <Col xl={2} className="text-center">
@@ -76,14 +68,11 @@ function Places(props) {
                                     <Col xl={5}>
                                         <p className="my-0 font-weight-bold"> Departure Date:</p>
                                         <p className="my-0">{new Date(Date.parse(departure.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {/* {destination && origin ? <p>{origin.SkyscannerCode} to {destination.SkyscannerCode}</p>: <></>} */}
-                                        <p>{origin} to {destination} </p>  
-                                    </Col>
+                                        <p>{origin.substring(0, origin.length - 4)} to {destination.substring(0, destination.length - 4)} </p>                                    </Col>
                                     <Col xl={5}>
                                         <p className="my-0 font-weight-bold">Return Date:</p>
                                         <p className="my-0">{new Date(Date.parse(returnInfo.DepartureDate)).toLocaleString().split(',')[0]}</p>
-                                        {/* {destination && origin ? <p>{destination.SkyscannerCode} to {origin.SkyscannerCode}</p>: <></>} */}
-                                        <p> {destination} to {origin} </p>
+                                        <p> {destination.substring(0, destination.length - 4)} to {origin.substring(0, origin.length - 4)} </p>
                                     </Col>
                                     <Col xl={2} className="text-center">
                                         {quote.MinPrice}
